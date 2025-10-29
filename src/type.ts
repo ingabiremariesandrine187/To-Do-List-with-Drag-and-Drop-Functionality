@@ -1,6 +1,7 @@
-// central place for types used across components
-export type Task = {
+export type Todo = {
   id: string;
   text: string;
-  completed: boolean;
+  x?: number;
+  y?: number;
 };
+

@@ -1,12 +1,14 @@
 import React from "react";
 
-type Props = { onAdd: (text: string) => void };
+type Props = {
+  onAdd: (text: string) => void;
+};
 
-export default function TaskInput({ onAdd }: Props): JSX.Element {
+export default function TaskInput({ onAdd }: Props) {
   const [value, setValue] = React.useState("");
 
   function handleAdd() {
-    if (!value.trim()) return; // prevent blank input
+    if (!value.trim()) return;
     onAdd(value);
     setValue("");
   }
